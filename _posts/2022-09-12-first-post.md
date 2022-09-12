@@ -9,7 +9,7 @@ image: /assets/images/graph.jpg
 
 # Some Graphics
 
-![Figure](https://github.com/courtneyhiatt/stat386-projects/blob/0558c8e8aa90085d412da1a904bfb7f9b330c169/assets/images/billionares.png)
+![Figure](https://github.com/esnt/stat386-projects/raw/main/assets/images/billionares.jpg)
 
 *Above is a graphic of the richest billionares in the United States.* 
 
