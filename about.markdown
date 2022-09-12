@@ -4,5 +4,5 @@ title: About
 permalink: /about/
 ---
 
-# About Me
+I am a senior in the Statistics program at Brigham Young University with an emphasis in Data Science. 
 
