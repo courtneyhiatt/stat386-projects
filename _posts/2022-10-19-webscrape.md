@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Is Hotness a Factor of Good Pedagogy? Using a Rate My Professors pseudo-API"
+title:  "Grading YOUR Professors: Scraping Ratings from Rate My Professors"
 date:   2022-10-18
 author: Courtney Hiatt
 description: Rate My Professor has been around since 1999, helping students choose their professors and courses for decades. Want to take a look at the data for your school's professors? Here's a guide on how to use a pseudo-API to scrape info on your school.
