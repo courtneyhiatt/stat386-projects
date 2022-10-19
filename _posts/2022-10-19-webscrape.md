@@ -47,3 +47,36 @@ import pandas as np
 for i in stuff:
   cnt += 1
 \end{document}
+
+
+
+\documentclass{book}
+\usepackage{listings}
+
+\lstdefinestyle{myListingStyle} 
+    {
+        basicstyle = \small\ttfamily,
+        breaklines = true,
+    }
+
+\begin{document}
+
+\begin{lstlisting}[
+    style = myListingStyle,
+    caption = {Nice listing.}
+    ]
+    if (n == 0 || n == 1){    
+        return n;        
+    }        
+    j = 0;    
+    for (i = 0; i < n-1; i++){      
+        if (arr[i] != arr[i+1]){        
+            arr[j] = arr[i];       
+            j++;      
+        }       
+    }      
+    arr[j++] = arr[n-1]; 
+\end{lstlisting}
+
+\end{document}
+
