@@ -1,12 +1,18 @@
 ---
 layout: post
-title:  "Webscrape"
+title:  "Is Hotness a Factor of Good Pedagogy? Using a Rate My Professors pseudo-API"
 date:   2022-10-18
 author: Courtney Hiatt
 description: This is a cool project.
 image: /assets/images/rmp.jpeg
 ---
-<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script> <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script> 
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+
+
+
 
 \\[documentclass{article}
 \usepackage{listings}
