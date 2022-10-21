@@ -20,7 +20,7 @@ Being a student at BYU in Provo, I'm interested to see if I could have gotten be
 
 <p style="text-align:center;"><img src="https://github.com/courtneyhiatt/stat386-projects/raw/main/assets/images/scrapevsapi.png" alt="" style="width:800px;"/></p>
 
-In general, it will be much easier to gather data through an API, if available. For Rate My Professor, there isn't an official API
+In general, it will be much easier to gather data through an API, if available. Unfortunately for us, Rate My Professor doesn't have an official API. But since this is probably some pretty popular data to scrape, a kind soul in the github world has <a href="https://github.com/tisuela/ratemyprof-api">posted their Python class</a> to scrape data specifically from Rate My Professors. My purposes differ a little bit than theirs, so I adapted the code to fit my needs and will walk through it below. 
 
 ```
 import pandas as pd
