@@ -18,6 +18,8 @@ Being a student at BYU in Provo, I'm interested to see if I could have gotten be
 
 ### Webscraping or API?
 
+<p style="text-align:center;"><img src="https://github.com/courtneyhiatt/stat386-projects/raw/main/assets/images/scrapevsapi.png" alt="" style="width:800px;"/></p>
+
 In general, it will be much easier to gather data through an API, if available. For Rate My Professor, there isn't an official API
 
 ```
