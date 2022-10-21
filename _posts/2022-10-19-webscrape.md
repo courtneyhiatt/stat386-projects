@@ -22,15 +22,18 @@ Being a student at BYU in Provo, I'm interested to see if I could have gotten be
 
 In general, it will be much easier to gather data through an API, if available. Unfortunately for us, Rate My Professor doesn't have an official API. But since this is probably some pretty popular data to scrape, a kind soul in the github world has <a href="https://github.com/tisuela/ratemyprof-api">posted their Python class</a> to scrape data specifically from Rate My Professors. My purposes differ a little bit than theirs, so I adapted the code to fit my needs and will walk through it below. 
 
-#### Step 1: Getting Started
+### Step 0: Is this legal??
 
 Although webscraping is completely legal, some websites ask that you don't scrape certain things (or at all). Luckily for us, our friend on github has licensing for their scraper, allowing us to scrape 
+
+
+### Step 1: Getting Started in Python
 
 The packages needed to use my code are: ```pandas```, ```json```, ```math```, ```os```, and, most importantly, ```requests```. The ```requests``` package allows ```get``` requests - the heart and soul of webscraping. 
 
 You will also need to grab your school's ID from Rate My Professor. If you go to your school's page, you will find it at the end of the url. It should be anywhere between 1-4 digits. 
 
-#### Step 2: Get Requests
+### Step 2: Get Requests
 
 This webscraper works by cycling through pages of professors and making ```get``` requests on each, so we need a for loop. But first, we need to check how many pages of professors our school of interest has. I put the following code inside a function called ```get_num_of_professors(id)``` with the school ID as an argument.
 
@@ -67,6 +70,8 @@ for i in range(1, num_of_pages + 1):
       df = pd.concat([df,df1], ignore_index=True)
 ```
 
-This 
+This gives a complete dataframe of the school's professor information, which includes a lot of variables that aren't really of interest to me. I decided to keep the school name and ID for easy comparison between the BYU campuses, the professor's first, last, and middle name, the number of ratings they have, and their overall rating (out of 5). Scraping the 3 campuses, I ended up with 7947 professors, more than half of which came from the BYU Provo campus. My full code and scraped dataset can be found in <a href="https://github.com/courtneyhiatt/rmpBYU">this github repository</a>. 
+
+
 
 
