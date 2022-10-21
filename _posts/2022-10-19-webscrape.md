@@ -22,8 +22,51 @@ Being a student at BYU in Provo, I'm interested to see if I could have gotten be
 
 In general, it will be much easier to gather data through an API, if available. Unfortunately for us, Rate My Professor doesn't have an official API. But since this is probably some pretty popular data to scrape, a kind soul in the github world has <a href="https://github.com/tisuela/ratemyprof-api">posted their Python class</a> to scrape data specifically from Rate My Professors. My purposes differ a little bit than theirs, so I adapted the code to fit my needs and will walk through it below. 
 
-The packages needed to use my code are: ```pandas```, ```json```, ```math```, ```os```, and, most importantly, ```requests```. Req
+#### Step 1: Getting Started
+
+Although webscraping is completely legal, some websites ask that you don't scrape certain things (or at all). Luckily for us, our friend on github has licensing for their scraper, allowing us to scrape 
+
+The packages needed to use my code are: ```pandas```, ```json```, ```math```, ```os```, and, most importantly, ```requests```. The ```requests``` package allows ```get``` requests - the heart and soul of webscraping. 
+
+You will also need to grab your school's ID from Rate My Professor. If you go to your school's page, you will find it at the end of the url. It should be anywhere between 1-4 digits. 
+
+#### Step 2: Get Requests
+
+This webscraper works by cycling through pages of professors and making ```get``` requests on each, so we need a for loop. But first, we need to check how many pages of professors our school of interest has. I put the following code inside a function called ```get_num_of_professors(id)``` with the school ID as an argument.
 
 ```
+page = requests.get(
+  "http://www.ratemyprofessors.com/filter/professor/?&page=1&filter=teacherlastname_sort_s+asc&query=*%3A*&queryoption=TEACHER&queryBy=schoolId&sid="
+  + str(id)
+) 
+temp_jsonpage = json.loads(page.content)
+num_of_prof = (temp_jsonpage["remaining"] + 20)
+```
+This returns the number of professors at a school, but we can easily change this to pages of professors by dividing the number by 20 (there are 20 professors listed per page). 
+
+Next, I make a ```get``` request on each page of professors to scrape their rating and identifying information, then append it to a ```pandas``` dataframe. The code is for my ```scrape_profs(id: str)``` function is below.
 
 ```
+professors = dict()
+num_of_prof = get_num_of_professors(id)
+num_of_pages = math.ceil(num_of_prof / 20)
+df = pd.DataFrame()
+
+for i in range(1, num_of_pages + 1):
+  page = requests.get(
+    "http://www.ratemyprofessors.com/filter/professor/?&page="
+     + str(i)
+     + "&filter=teacherlastname_sort_s+asc&query=*%3A*&queryoption=TEACHER&queryBy=schoolId&sid="
+     + str(id)
+   )
+   json_response = json.loads(page.content)
+   temp_list = json_response["professors"]
+
+   for json_professor in json_response["professors"]:
+      df1 = pd.DataFrame(json_professor, index=[0])
+      df = pd.concat([df,df1], ignore_index=True)
+```
+
+This 
+
+
