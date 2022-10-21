@@ -24,7 +24,7 @@ In general, it will be much easier to gather data through an API, if available. 
 
 ### Step 0: Is this legal??
 
-Although webscraping is completely legal, some websites ask that you don't scrape certain things (or at all). Luckily for us, our friend on github has licensing for their scraper, allowing us to scrape 
+Although webscraping is completely legal, some websites ask that you don't scrape certain things (or at all). Looking at their <a href="https://www.ratemyprofessors.com/terms-of-use">Terms of Use</a>, Rate My Professor says: *"The Site is to be used solely for your noncommercial, non-exclusive, non-assignable, non-transferable and limited personal use and for no other purposes."* Because I'm not getting paid to analyze this data and my extent of use does not go beyond the scope of my data science class, I think it's okay to scrape. However, I did email them for written consent, but they haven't gotten back to me yet at the time of writing this post.
 
 
 ### Step 1: Getting Started in Python
@@ -72,6 +72,8 @@ for i in range(1, num_of_pages + 1):
 
 This gives a complete dataframe of the school's professor information, which includes a lot of variables that aren't really of interest to me. I decided to keep the school name and ID for easy comparison between the BYU campuses, the professor's first, last, and middle name, the number of ratings they have, and their overall rating (out of 5). Scraping the 3 campuses, I ended up with 7947 professors, more than half of which came from the BYU Provo campus. My full code and scraped dataset can be found in <a href="https://github.com/courtneyhiatt/rmpBYU">this github repository</a>. 
 
+### Conclusion
 
+In this post, I went over my process for scraping data from Rate My Professors. In a later post, I will perform an exploratory data analysis on my data to begin testing for any relationships between schools and overall professor ratings. If you liked my code or have any suggestions on making it better, comment below! 
 
 
