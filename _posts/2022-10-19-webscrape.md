@@ -12,7 +12,13 @@ image: /assets/images/rmp.jpeg
 The code in this blog post has been adapted from <a href="https://github.com/tisuela/ratemyprof-api">this github repository</a>. 
 
 ### Introduction
-As a student, it has always been hard to choose professors. From general requirements to major courses, 
+As a student, it has always been hard to choose professors. From general requirements to major courses, professors' teaching quality and styles can differ so much. <a href="https://www.ratemyprofessors.com/">Rate My Professors</a> gives students an opportunity to be open and honest about their experiences with a professor, and thus provides valuable information to other students looking to take the course and to the professors themselves (we can all use some constructive feedback at times). 
+
+Being a student at BYU in Provo, I'm interested to see if I could have gotten better quality professors at another BYU campus. Is there is a difference in professor 'quality' (based off of their overall rating on <a href="https://www.ratemyprofessors.com/">RateMyProfessors.com</a>) between the 3 BYU campuses (Provo, Idaho, and Hawaii)? I will perform an EDA on this data in a later post. For now, let's start with getting the data. 
+
+### Webscraping or API?
+
+In general, it will be much easier to gather data through an API, if available. For Rate My Professor, there isn't an official API
 
 ```
 import pandas as pd
@@ -27,4 +33,3 @@ for i in stuff:
     
 return None
 ```
-https://www.ratemyprofessors.com/
