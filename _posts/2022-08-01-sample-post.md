@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Sample Post"
-date:   2022-08-01 11:24:47 -0700
+date:   2022-12-14
 author: Shannon Tass
 description: A sample post to show how the content will look and how different
   headlines, quotes and codes will be represented.
