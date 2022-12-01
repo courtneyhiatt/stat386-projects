@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "My First Post"
-date:   2022-09-12
+date:   2023-09-12
 author: Courtney Webb
 description: Here is my first post on my data science blog.
 image: /assets/images/graph.jpeg
